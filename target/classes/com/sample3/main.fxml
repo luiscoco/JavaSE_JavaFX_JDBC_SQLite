@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.control.cell.PropertyValueFactory?>
 <?import javafx.scene.layout.*?>
+
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
             fx:controller="com.sample3.Controller" xmlns:fx="http://javafx.com/fxml/1">
+    <!-- Existing center section -->
     <center>
         <TableView fx:id="artistTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <!-- Columns definition -->
             <columns>
                 <TableColumn prefWidth="${artistTable.width}" text="Name">
                         <cellValueFactory>
@@ -20,6 +22,8 @@
             </BorderPane.margin>
         </TableView>
     </center>
+
+    <!-- Existing right section -->
     <right>
         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="170.00" spacing="20.0" BorderPane.alignment="CENTER">
             <children>
@@ -30,10 +34,6 @@
             <BorderPane.margin>
                 <Insets right="10.0" />
             </BorderPane.margin>
-        </VBox>
-    </right>
-    <bottom>
-        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
                 <ProgressBar fx:id="progressBar" visible="false" prefWidth="200.0" progress="0.0">
                     <HBox.margin>
@@ -41,6 +41,21 @@
                     </HBox.margin>
                 </ProgressBar>
             </children>
+        </VBox>
+    </right>
+
+    <!-- New bottom section -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="10">
+            <children>
+                <Label text="New Artist Name:" />
+                <TextField fx:id="newArtistNameField" />
+            </children>
+            <HBox.margin>
+                <Insets top="10.0" />
+            </HBox.margin>
         </HBox>
     </bottom>
+
 </BorderPane>
+
