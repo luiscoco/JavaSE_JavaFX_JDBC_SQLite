@@ -1,12 +1,12 @@
 package com.sample3;
 
-import com.sample3.model.Datasource;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import com.sample3.model.Datasource;
 
 public class Main extends Application {
 
